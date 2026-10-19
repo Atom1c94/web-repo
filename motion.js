@@ -1,7 +1,7 @@
 (() => {
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (preference.matches || !('IntersectionObserver' in window)) return;
-  const targets = [...document.querySelectorAll('.intro, .compass, .section-top, .card, .next > div, .closing')];
+  const targets = [...document.querySelectorAll('.intro, .compass, .section-top, .card, .next > div, .contact-heading, .contact-list, .closing')];
   let observer;
   const showAll = () => {
     observer?.disconnect();
@@ -28,3 +28,4 @@
     showAll();
   }
 })();
+
